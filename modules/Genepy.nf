@@ -34,7 +34,7 @@ process Genepy_score {
                     python -u ./gp.py "\$fname" ${kary}
                 else
                     echo "Processing \$file from chunk folder"
-                    awk -F"\\t" '{OFS=FS;for (i=7;i<=16;i++) { if(length(\$i)<1 || \$i ~ /^0+([.0]+)?([eE][+-]?[0-9]+)?\$)/) { \$i="3.98e-6";} } print }' "\$file" > "\$fname"
+                    awk -F"\\t" '{OFS=FS;for (i=7;i<=16;i++) { if(length(\$i)<1 || \$i ~ /^0+([.0]+)?([eE][+-]?[0-9]+)?\$)/) { \$i="6.84e-7";} } print }' "\$file" > "\$fname"
     
                     python -u ./gp.py "\$fname" ${kary}
                     
